@@ -7,4 +7,9 @@
       },
     }
   },
+  "rust-analyzer.linkedProjects": [
+    "./structDemo1/Cargo.toml",
+    "./structDemo1/Cargo.toml",
+    "./slice/Cargo.toml"
+  ],
 }
