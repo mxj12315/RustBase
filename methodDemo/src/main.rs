@@ -23,8 +23,6 @@ impl Rectangle {
     }
 }
 fn main() {
-    let str = String::from("hello");
-    
     let rect = Rectangle {
         width: 20,
         height: 30,
