@@ -1,16 +1,4 @@
 {
   "files.autoSave": "afterDelay",
-  "editor.semanticTokenColorCustomizations": {
-    "rules": {
-      "*.mutable": {
-        "fontStyle": "", // set to empty string to disable underline, which is the default
-      },
-    }
-  },
-  "rust-analyzer.linkedProjects": [
-    "./structDemo1/Cargo.toml",
-    "./structDemo1/Cargo.toml",
-    "./slice/Cargo.toml"
-  ],
-  "csharp.inlayHints.parameters.enabled": true,
+ 
 }

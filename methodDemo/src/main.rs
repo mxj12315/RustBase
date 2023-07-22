@@ -17,14 +17,21 @@ impl Rectangle {
         );
         self.width * self.height
     }
-    let a = 2;
     
+    fn get_width(&self)-> u32 {
+        self.width
+    }
 }
 fn main() {
+    let str = String::from("hello");
+    
     let rect = Rectangle {
         width: 20,
         height: 30,
     };
 
     rect.area();
+    
+
+    println!("width={}", rect.get_width());
 }
