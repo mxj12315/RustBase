@@ -12,4 +12,5 @@
     "./structDemo1/Cargo.toml",
     "./slice/Cargo.toml"
   ],
+  "csharp.inlayHints.parameters.enabled": true,
 }
