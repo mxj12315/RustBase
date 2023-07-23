@@ -1,4 +1,7 @@
 {
   "files.autoSave": "afterDelay",
+  "rust-analyzer.linkedProjects": [
+    "./vectorDemo1/Cargo.toml"
+  ],
  
 }

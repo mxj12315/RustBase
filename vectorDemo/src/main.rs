@@ -16,12 +16,13 @@ fn main() {
         None => println!("未匹配到")
     }
 
-    for  i in 0..ve1.len() 
+    // i表示数组中的每一个元素的引用
+    for  i in  &mut ve1
     {
-        ve1[i] += 2;
+        *i += 2;
     }
 
-    for j in [1..2] 
+    for j in &ve1
     {
         print!("j={}",j);
     }
