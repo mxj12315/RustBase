@@ -18,7 +18,7 @@ fn main() {
     // println!("str2={}", str2); // 报错 str2的所有权转移到了str4,所以str2不可用
     println!("str3={}", str3); // str3的所有权没有转移
 
-    // 格式化
+    // 格式化,使用format!宏不会转移所有权，拼接的字符串可以使用多次
     let str5 = String::from("1990");
     let str6 = String::from("10");
     let str7 = String::from("12");
@@ -34,3 +34,5 @@ fn main() {
     
 
 }
+
+
