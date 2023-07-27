@@ -44,7 +44,11 @@ impl<X1, Y1> Point<X1, Y1> {
     fn  drow<N,M>(self,a:M) {
         
     }
+
+ 
 }
+
+
 
 
 fn main() {
