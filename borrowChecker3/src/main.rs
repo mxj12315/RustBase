@@ -4,6 +4,10 @@
 struct ImportantExcerpt<'a> {
     part: &'a str, // 'a 声明了str的生命周期
 }
+impl <'b> ImportantExcerpt <'b>{  // 包含一个‘b的生命周期参数
+    
+}
+
 
 impl<'a> ImportantExcerpt<'a> {
     // 规则一只有一个参数则参数的返回值以参数的什么周期一致，所以i32不需要标注‘a的生命周期
