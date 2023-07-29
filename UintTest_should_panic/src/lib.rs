@@ -49,4 +49,15 @@ mod tests {
     fn meet_the_conditions() {
         Guess::new(50);
     }
+
+
+    // 忽略测试
+    // 传入符合条件的参数
+    // 打印结果：est tests::meet_the_conditions ... ok
+    #[test]
+    #[ignore]
+    fn meet_the_conditions1() {
+        Guess::new(50);
+    }
+
 }
