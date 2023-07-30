@@ -27,6 +27,6 @@ impl Inventory {
 }
 
 fn main() {
-    let aaBB = 0 ;
+    let _aaBB = 0 ;
     println!("Hello, world!");
 }
