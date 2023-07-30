@@ -1,13 +1,35 @@
 use std::{error::Error, fs, env};
 
 //定义一个结构来整合用户输入的数据
+/// The `Config` struct represents a configuration for a search operation, including
+/// the query, file path, and whether to ignore case.
+/// 
+/// Properties:
+/// 
+/// * `query`: A string that represents the search query or keyword.
+/// * `file_path`: The `file_path` property is a string that represents the path to a
+/// file. It is used to specify the location of the file that will be searched or
+/// processed.
+/// * `ignore_case`: A boolean value indicating whether the search should be
+/// case-insensitive or not.
 pub struct Config {
-    pub query: String,
-    pub file_path: String,
-    pub ignore_case: bool,
+    pub query: String,// 需要搜索的字符串
+    pub file_path: String,//文件路径
+    pub ignore_case: bool,// 是否忽略大小写
 }
 
 impl Config {
+/// The `build` function in Rust takes a vector of strings as arguments, checks if the length is at
+/// least 3, and returns a struct with the query, file path, and a flag indicating whether to ignore
+/// case.
+/// 
+/// Arguments:
+/// 
+/// * `args`: A vector of strings that contains the command line arguments passed to the program.
+/// 
+/// Returns:
+/// 
+/// The function `build` returns a `Result<Self, &'static str>`.
     pub fn build(args: Vec<String>) -> Result<Self, &'static str> {
         // 对参数进行判断
         if args.len() < 3 {
@@ -28,6 +50,18 @@ impl Config {
 //      //  Config::build(args)
 // }
 
+/// The `run` function reads the contents of a file specified in the `cfg` struct, performs a search
+/// based on the query string, and prints the matching lines.
+/// 
+/// Arguments:
+/// 
+/// * `cfg`: A struct that contains the configuration for the program. It includes the following fields:
+/// 
+/// Returns:
+/// 
+/// The function `run` is returning a `Result` type with the `Ok` variant containing `()` (an empty
+/// tuple) if the function executes successfully, and the `Err` variant containing a `Box<dyn Error>` if
+/// an error occurs.
 pub fn run(cfg: Config) -> Result<(), Box<dyn Error>> {
     //  let content = fs::read_to_string(cfg.file_path)
     // .expect("打开文件出错了");
@@ -86,6 +120,9 @@ Pick three.";
 
     // 不区分大小写
     #[test]
+ /// The `case_insensitive` function tests the `search_case_insensitive` 
+ /// function by asserting that it
+ /// returns the expected results for a given query and contents.
     fn case_insensitive() {
         let query = "rUsT";
         let contents = "\
