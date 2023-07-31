@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"release":[["impl Freeze for <a class=\"enum\" href=\"release/aa/kinds/enum.PrimaryColor.html\" title=\"enum release::aa::kinds::PrimaryColor\">PrimaryColor</a>",1,["release::aa::kinds::PrimaryColor"]],["impl Freeze for <a class=\"enum\" href=\"release/aa/kinds/enum.SecondaryColor.html\" title=\"enum release::aa::kinds::SecondaryColor\">SecondaryColor</a>",1,["release::aa::kinds::SecondaryColor"]]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

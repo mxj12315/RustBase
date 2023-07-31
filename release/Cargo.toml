@@ -1,0 +1,15 @@
+[package]
+name = "release"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# 这个配置的值从 0 到 3。越高的优化级别需要更多的时间编译
+# 设置dev环境
+[profile.dev]   # cargo build 
+opt-level = 0  # Finished dev [unoptimized + debuginfo] target(s) in 0.07s
+# 设置release环境
+[profile.release]  # cargo build --release
+opt-level = 3  # Finished release [optimized] target(s) in 0.09s
