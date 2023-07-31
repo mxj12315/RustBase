@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Cargo launch",
+            "cargo": {
+                "args": [
+                    "build",
+                ]
+            },
+            "args": []
+        },
+    {
+        "type": "lldb",
+        "request": "launch",
+        "name": "Cargo test",
+        "cargo": {
+            "args": [
+                "test",
+                "--no-run",
+                "--lib"
+            ]
+        },
+        "args": []
+    }
+    ]
+}
