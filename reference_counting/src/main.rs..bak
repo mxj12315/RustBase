@@ -1,0 +1,25 @@
+/* 
+ * Rc<T>指针 reference counting
+ * 记录一个值引用的数量来知晓这个值是否仍在被使用。如果某个值有零个引用，就代表没
+ * 有任何有效引用并可以被清理。
+ * 
+ * Rc<T> 用于当我们希望在堆上分配一些内存供程序的多个部分读取，而且无法在编译时确定程序的哪一部分会最后结束使用它的时候
+ * Rc<T> 只能用于单线程场景；
+ */
+
+// 使用Box智能指针但是无法让一个数据被多个变量使用
+enum List {
+    Cons(i32, Box<List>),
+    Nil,
+}
+
+use crate::List::{Cons, Nil};
+
+fn main() {
+    let a: List = Cons(10,Box::new(Nil));
+    // 让b和c同时指向a的一部分
+    let b: List = Cons(20,Box::new(a)); // 此时a的所有权已经被移动到b中
+    let c: List = Cons(30,Box::new(a)); // 此时a已经无法使用
+
+
+}
