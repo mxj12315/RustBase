@@ -33,8 +33,11 @@ fn main() {
     // 使用 move 来强制闭包为线程获取 list 的所有权
     let list = vec![1, 2, 3];
     println!("Before defining closure: {:?}", list);
+  
     // 使用move将list变量的所有权转移到新的线程中
     thread::spawn(move || println!("From thread: {:?}", list))
         .join()
         .unwrap();
+
+
 }
